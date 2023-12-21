@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="main.css"></link>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    </link>
 </head>
+
 <body>
     <div id="wrapper">
         <div id="modal">
@@ -14,63 +17,63 @@
     </div>
 
     <script defer>
-    let modal = document.getElementById("modal")
-    modal.addEventListener("click", () => {
-        let acceptOfferContainer = document.createElement("div")
-        let xButton = document.createElement("div")
-        let acceptOfferButton = document.createElement("div")
-        let clickToAcceptParagraph = document.createElement("p")
-        clickToAcceptParagraph.textContent = "Click the button below to accept our amazing offer!"
-        let offerAcceptedText = document.createElement("p")
-        offerAcceptedText.textContent = "Offer accepted"
-        offerAcceptedText.id = "offer-accepted"
-        let xSymbol = document.createElement("p")
-        xSymbol.id ="x-symbol"
-        xSymbol.innerHTML = "x"
-        xButton.appendChild(xSymbol)
-        let acceptOfferParagraph = document.createElement("p")
-        acceptOfferParagraph.id = "accept-offer-paragraph"
-        acceptOfferParagraph.textContent = "Accept offer"
-
-        acceptOfferContainer.id = "accept-offer-container"
-        xButton.id = "x-button"
-        acceptOfferButton.id = "accept-offer-button"
-        acceptOfferButton.appendChild(acceptOfferParagraph)
-        clickToAcceptParagraph.id = "click-to-accept-paragraph"
-
-        let wrapper = document.querySelector("#wrapper")
-        wrapper.appendChild(acceptOfferContainer)
-        wrapper.style.background= "gray"
-
-        acceptOfferContainer.appendChild(xButton)
-        acceptOfferContainer.appendChild(acceptOfferButton)
-        acceptOfferContainer.appendChild(clickToAcceptParagraph)
-
-        xButton.addEventListener("click", () => {
-            wrapper.style.background= ""
-            acceptOfferContainer.remove()
-            
-        })
-
-       document.getElementById("wrapper").addEventListener("click", (e) => {
-            // wrapper.style.background= ""
+        let modal = document.getElementById("modal")
+        modal.addEventListener("click", () => {
+            let acceptOfferContainer = document.createElement("div")
+            let xButton = document.createElement("div")
+            let acceptOfferButton = document.createElement("div")
+            let clickToAcceptParagraph = document.createElement("p")
+            clickToAcceptParagraph.textContent = "Click the button below to accept our amazing offer!"
             let offerAcceptedText = document.createElement("p")
+            offerAcceptedText.textContent = "Offer accepted"
+            offerAcceptedText.id = "offer-accepted"
+            let xSymbol = document.createElement("p")
+            xSymbol.id = "x-symbol"
+            xSymbol.innerHTML = "x"
+            xButton.appendChild(xSymbol)
+            let acceptOfferParagraph = document.createElement("p")
+            acceptOfferParagraph.id = "accept-offer-paragraph"
+            acceptOfferParagraph.textContent = "Accept offer"
+            let wrapperClicks = 0
+
+            acceptOfferContainer.id = "accept-offer-container"
+            xButton.id = "x-button"
+            acceptOfferButton.id = "accept-offer-button"
+            acceptOfferButton.appendChild(acceptOfferParagraph)
+            clickToAcceptParagraph.id = "click-to-accept-paragraph"
+
+            let wrapper = document.querySelector("#wrapper")
+            wrapper.appendChild(acceptOfferContainer)
+            wrapper.style.background = "gray"
+
+            acceptOfferContainer.appendChild(xButton)
+            acceptOfferContainer.appendChild(acceptOfferButton)
+            acceptOfferContainer.appendChild(clickToAcceptParagraph)
+
+            xButton.addEventListener("click", () => {
+                wrapper.style.background = ""
+                acceptOfferContainer.remove()
+
+            })
+
+            document.getElementById("wrapper").addEventListener("click", (e) => {
+                }
+            )
+
+            acceptOfferButton.addEventListener("click", () => {
+                document.createElement("p")
+                wrapper.style.background = ""
+
+                acceptOfferContainer.remove()
+                modal.remove()
+
+                wrapper.appendChild(offerAcceptedText)
+            })
+
+
         })
-
-        acceptOfferButton.addEventListener("click", () => {
-            document.createElement("p")
-            wrapper.style.background= ""
-
-            acceptOfferContainer.remove()
-            modal.remove()
-
-            wrapper.appendChild(offerAcceptedText)
-        })
-
-        
-    })
     </script>
-    
-</body>
-</html>
 
+</body>
+
+</html>
