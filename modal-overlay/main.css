@@ -48,22 +48,40 @@
     height: 15px;
 }
 
+#x-symbol {
+    position: relative;
+    bottom: 19px; 
+    left: 4px;
+}
+
 #accept-offer-button {
     position: relative;
-    top: 60px; left: 50px;
+    top: 50px; 
+    left: 40px;
     border: solid black 1px;
-    width: 50px;
+    width: 120px;
     height: 25px;
 }
 
 #click-to-accept-paragraph {
     position: relative;
-    top: 0px; left: 0px;
+    bottom: 30px; 
+    left: 20px;
+    // margin-top: -50px; /* Negative half of height. */
+    // margin-left: -100px; /* Negative half of width. */
 }
 
 #offer-accepted {
     position: fixed;
     top: 50%;
     left: 50%;
+    margin-top: -20px; /* Negative half of height. */
+    margin-left: -50px; /* Negative half of width. */
     font-size : 20px;
+}
+
+#accept-offer-paragraph {
+    position: relative;
+    bottom: 10px;
+    left: 10%;
 }

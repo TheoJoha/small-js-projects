@@ -24,10 +24,18 @@
         let offerAcceptedText = document.createElement("p")
         offerAcceptedText.textContent = "Offer accepted"
         offerAcceptedText.id = "offer-accepted"
+        let xSymbol = document.createElement("p")
+        xSymbol.id ="x-symbol"
+        xSymbol.innerHTML = "x"
+        xButton.appendChild(xSymbol)
+        let acceptOfferParagraph = document.createElement("p")
+        acceptOfferParagraph.id = "accept-offer-paragraph"
+        acceptOfferParagraph.textContent = "Accept offer"
 
         acceptOfferContainer.id = "accept-offer-container"
         xButton.id = "x-button"
         acceptOfferButton.id = "accept-offer-button"
+        acceptOfferButton.appendChild(acceptOfferParagraph)
         clickToAcceptParagraph.id = "click-to-accept-paragraph"
 
         let wrapper = document.querySelector("#wrapper")
@@ -44,7 +52,7 @@
             
         })
 
-       document.getElementById("wrapper").addEventListener("click", () => {
+       document.getElementById("wrapper").addEventListener("click", (e) => {
             // wrapper.style.background= ""
             let offerAcceptedText = document.createElement("p")
         })
