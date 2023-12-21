@@ -1,0 +1,8 @@
+#wrapper {
+    width: 100ww;
+    height: 100wh;
+}
+
+#canvas{
+    border: solid black 5px;
+}
